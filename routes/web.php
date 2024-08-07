@@ -16,3 +16,7 @@ Route::get('/Homepage', function () {
 Route::get('/Application', function () {
     return view('application');
 });
+
+Route::get('/test', function () {
+    return view('test');
+});
