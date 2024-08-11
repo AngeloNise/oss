@@ -24,7 +24,7 @@
                 <li><a href="{{ url('/') }}">Home</a></li>
                 <!--<li><a href="{{ url('/Dashboard') }}">Dashboard</a></li>-->
                 <p>Upcoming Events<p>
-                <li><a href="{{ url('/In-Campus') }}">In-Campus</a></li>
+                <li><a href="{{ url('/In-Campus!') }}">In-Campus</a></li>
                 <li><a href="#">Off-Campus</a></li>
                 <!--<li><a href="{{ url('/Application') }}">Application</a></li>-->
             </ul>            
@@ -36,7 +36,7 @@
         <h1>Hi, PUPian!</h1>
         <p>Please click or tap your destination.</p>
         <div class="buttons">
-            <a href="/student" class="button student">Student</a>
+            <a href="/Homepage" class="button student">Student</a>
             <a href="/faculty" class="button faculty">Faculty</a>
         </div>
         <p class="terms">

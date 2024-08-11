@@ -119,241 +119,55 @@ body {
     }
 }
 
-.centerbody{
-    background-color: #f8f8f8;
-    height: 100%;
-    width: 72%;
-    margin-left: 3%;
+.download-section {
+    padding: 30px;
+    margin-left: 14%;
 }
 
-.center{
-    margin-top: 7%;
-    margin-left: 15%;
-    height: 100%;
-    width: 83%;
-    position: center;
+.download-section {
+    padding: 20px;
 }
 
-.center h1 {
-    color: black;
-    font-weight: bold;
-}
-.center p {
-    line-height: 2;
-    text-align: justify;
-    font-size: 22px;
-    color: #555555;
+.downloads {
+    margin-bottom: 30px;
 }
 
-.contact-info {
-    margin-top: 24%;
-    margin-left: 15%;
-    height: 100%;
-    width: 80%;
-    display: flex; /* Use flexbox to align items in a row by default */
-    flex-direction: row; /* Default layout in a row */
-    justify-content: space-between;
-    border-top: 2px solid #000000;
-    padding-left: 40px;
-    flex-wrap: wrap; /* Allows items to wrap if needed */
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 
-.contact-info div {
-    width: 28%;
-    margin-top: 2%;
-    align-items: center;
-    margin-bottom: 20px; /* Space between rows if wrapping occurs */
+.file-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.contact-info h3 {
-    font-size: 23px;
-    color: #800E13;
-    font-weight: bold;
+.file {
+    width: 150px;
     text-align: center;
+}
+
+.file img {
+    width: 100%;
+    height: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.file p {
     margin: 0;
-}
-
-.contact-info p {
-    font-size: 16px;
-    color: #555555;
-    background-color: #f8f8f8;
-    text-align: center;
-}
-
-
-@media (max-width: 858px) {
-    .contact-info {
-        flex-direction: column;
-        margin-left: 15%;
-        width: 85%;
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .contact-info div {
-        width: 100%;
-        margin-bottom: 3px;
-    }
-
-    .contact-info p {
-        font-size: 13px;
-        margin-top: 0.2%
-    }
-
-    .contact-info h3 {
-        font-size: 16px;
-    }
-
-    .center h1{
-        font-size: 16px;
-    }
-
-    .center p{
-        font-size: 13px;
-    }
-}
-
-.login-option {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 25%; 
-    text-align: center;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-    padding: 2em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    box-sizing: border-box; /* Ensures padding and border are included in the width */
-}
-
-.logo {
-    width: 100px;
-    margin-bottom: 1em;
-}
-
-.login-option h1 {
-    font-size: 2em;
+    font-size: 0.9em;
     color: #333;
 }
 
-.login-option p {
-    color: #666;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column; /* Align buttons in a column */
-    align-items: center; /* Center the buttons horizontally */
-    gap: 1em; /* Space between buttons */
-    margin: 1.5em 0;
-}
-
-.button {
-    display: flex; /* Use flexbox for centering text */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    padding: 0.7em 2em;
-    width: 60%;
-    margin: 0.5em;
-    border-radius: 4px;
+.file a {
     text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    color: inherit;
 }
 
-.student {
-    background-color: #007bff;
-}
-
-.student:hover {
-    background-color: #0056b3;
-}
-
-.faculty {
-    background-color: #dc3545;
-}
-
-.faculty:hover {
-    background-color: #a71d2a;
-}
-
-.terms {
-    font-size: 0.9em;
-    color: #666;
-}
-
-.terms a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.terms a:hover {
-    text-decoration: underline;
-}
-
-
-@media (max-width: 847px) {
-    .centerbody{
-        background-color: #f8f8f8;
-        height: 100%;
-        width: 100%;
-        margin-left: 3%;
-    }
-    .center h1 {
-        color: black;
-        font-weight: bold;
-        margin-top: 17%;
-        width: 100%;
-       
-    }
-
-    .center p {
-        margin-top: 26%;
-        margin: 0;
-        margin-left: -3%;
-    }
-
-    .login-option {
-        width: 59%;
-        height: auto;
-        top: 0;
-        bottom: auto;
-        right: 0; /* Move to the right side */
-        left: auto; /* Remove left alignment */
-        border-radius: 0;
-        padding: 1px;
-        box-shadow: none;
-        overflow: hidden;
-        position: absolute; /* Ensure it's positioned correctly */
-        background: transparent; /* Set background to transparent */
-        backdrop-filter: none; /* Remove the glass effect filter */
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .login-option h1,
-    .login-option p,
-    .terms {
-        display: none;
-    }
-
-    .buttons {
-        margin: 0;
-        flex-direction: row;
-        justify-content: flex-end;
-        font-size: 10px;
-    }
-
-    .button {
-        padding: 0.5em 1em;
-        margin: 0.3em;
-        width: 20%;
-    }
+.file img:hover {
+    transform: scale(1.05);
 }
