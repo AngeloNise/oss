@@ -20,3 +20,7 @@ Route::get('/Application', function () {
 Route::get('/test', function () {
     return view('test');
 });
+
+Route::get('/Dashboard', function () {
+    return view('dborg');
+});
