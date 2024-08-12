@@ -29,19 +29,19 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         </label>
         <ul>
-            <li><a href="{{ url('/Homepage') }}">Home</a></li>
-            <li><a href="{{ url('/Account-Settings') }}">Account Settings</a></li>
-            <li><a href="{{ url('/Dashboard') }}">Dashboard</a></li>
-            <li><a href="{{ url('/Application') }}">Application</a></li>
-            <li><a href="{{ url('/Download') }}">Download Forms</a></li>
-            <li><a href="{{ url('/Pre-Evaluation') }}">Pre-Evaluation</a></li>
+            <li><a href="<?php echo e(url('/Homepage')); ?>">Home</a></li>
+            <li><a href="<?php echo e(url('/Account-Settings')); ?>">Account Settings</a></li>
+            <li><a href="<?php echo e(url('/Dashboard')); ?>">Dashboard</a></li>
+            <li><a href="<?php echo e(url('/Application')); ?>">Application</a></li>
+            <li><a href="<?php echo e(url('/Download')); ?>">Download Forms</a></li>
+            <li><a href="<?php echo e(url('/Pre-Evaluation')); ?>">Pre-Evaluation</a></li>
             <p>Upcoming Events<p>
-            <li><a href="{{ url('/In-Campus') }}">In-Campus</a></li>
+            <li><a href="<?php echo e(url('/In-Campus')); ?>">In-Campus</a></li>
             <li><a href="#">Off-Campus</a></li>
             <!--<li><a href="#">Log-Out</a></li>-->
         </ul>            
     </div>   
 </div>  
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
 </body>
-</html>
+</html><?php /**PATH D:\College\BSIT 3-1N\proj\oss_system\resources\views/layout/orglayout.blade.php ENDPATH**/ ?>

@@ -1,3 +1,3 @@
-@extends('layout.orglayout')
+@extends('layout.adminlayout')
 @section('content')
 @endsection
