@@ -76,3 +76,7 @@ Route::post('/upload', [DocumentController::class, 'store'])->name('documents.st
 Route::get('/admin', [DocumentController::class, 'index'])->name('documents.index');
 Route::get('/admin/documents', [DocumentController::class, 'index'])->name('documents.index');
 Route::get('/admin/documents', [DocumentController::class, 'index'])->name('admin.documents.index');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
