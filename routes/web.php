@@ -1,82 +1,99 @@
 <?php
 
+use App\Http\Controllers\Faculty\FacultyHomeController;
+use App\Http\Controllers\Faculty\FacultyLoginController;
+use App\Http\Middleware\UserMiddleware;
+use App\Http\Middleware\FacultyMiddleware;
+use App\Http\Middleware\GuestFacultyMiddleware;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\DocumentController;
 
-// Existing routes
+// GUEST
 Route::get('/', function () {
-    return view('welcome');
+    return view('/guest/welcome');
 });
 
 Route::get('/In-Campus!', function () {
-    return view('incampusg');
+    return view('/guest/incampusg');
 });
 
-Route::get('/Homepage', function () {
-    return view('homepage');
-});
+// Faculty routes
+Route::prefix('faculty')->name('faculty.')->group(function () {
 
-Route::get('/Application', function () {
-    return view('application');
-});
+    Route::middleware([GuestFacultyMiddleware::class])->group(function () {
+        Route::get('/login', [FacultyLoginController::class, 'index']);
+        Route::post('/login', [FacultyLoginController::class, 'login'])->name('login');
+    });
 
-Route::get('/test', function () {
-    return view('test');
-});
+    Route::middleware(['auth', FacultyMiddleware::class])->group(function () {
+        Route::get('/home', [FacultyHomeController::class, 'index'])->name('home');
+        
+        Route::get('/Dashboard-Admin', function() {
+            return view ('/faculty/auth/dbadmin');
+        })->name('dbadmin');
 
-Route::get('/Dashboard', function () {
-    return view('dborg');
-});
+        Route::get('/Organization-Account-Management', function() {
+            return view ('/faculty/auth/oam');
+        })->name('dbadmin');
+        
+        Route::get('/Application-Admin', function() {
+            return view ('/faculty/auth/applicationadmin');
+        })->name('dbadmin');
 
-Route::get('/Download', function () {
-    return view('download');
-});
+        Route::get('/Post-Report', function() {
+            return view ('/faculty/auth/postreport');
+        })->name('dbadmin');
 
-Route::get('/Account-Settings', function () {
-    return view('accset');
-});
-
-Route::get('/Pre-Evaluation', function () {
-    return view('preeval');
-});
-
-Route::get('/In-Campus', function () {
-    return view('incampus');
-});
-
-// Admin routes
-Route::get('/Dashboard-Admin', function () {
-    return view('dbadmin');
-});
-
-Route::get('/Organization-Account-Management', function () {
-    return view('oam');
-});
-
-Route::get('/Application-Admin', function () {
-    return view('applicationadmin');
-});
-
-Route::get('/Post-Report', function () {
-    return view('postreport');
-});
-
-Route::get('/Pre-Evaluation-Document', function () {
-    return view('preevaldoc');
-});
-
-Route::get('/Pre-Evaluation-FRA', function () {
-    return view('preevalfra');
+        Route::get('/Pre-Evaluation-Document', function() {
+            return view ('/faculty/auth/preevaldoc');
+        })->name('dbadmin');
+    });
 });
 
 
-Route::get('/upload', [DocumentController::class, 'create'])->name('documents.create');
-Route::post('/upload', [DocumentController::class, 'store'])->name('documents.store');
-Route::get('/admin', [DocumentController::class, 'index'])->name('documents.index');
-Route::get('/admin/documents', [DocumentController::class, 'index'])->name('documents.index');
-Route::get('/admin/documents', [DocumentController::class, 'index'])->name('admin.documents.index');
-
+// Auth routes
 Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dborg')->middleware(UserMiddleware::class);
+Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'orgLogin'])->name('login');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Organization routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('/Homepage', function () {
+        return view('/org/auth/homepage');
+    });
+
+    Route::get('/Application', function () {
+        return view('/org/auth/application');
+    });
+
+    Route::get('/test', function () {
+        return view('test');
+    });
+
+    Route::get('/Dashboard', function () {
+        return view('/org/auth/dborg');
+    });
+
+    Route::get('/Download', function () {
+        return view('/org/auth/download');
+    });
+
+    Route::get('/Account-Settings', function () {
+        return view('/org/auth/accset');
+    });
+
+    Route::get('/Pre-Evaluation', function () {
+        return view('/org/auth/preeval');
+    });
+
+    Route::get('/In-Campus', function () {
+        return view('/org/auth/incampus');
+    });
+
+    Route::get('/Pre-Evaluation-FRA', function () {
+        return view('/org/auth/preevalfra');
+    });
+
+});

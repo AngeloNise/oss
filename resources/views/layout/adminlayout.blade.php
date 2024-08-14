@@ -19,11 +19,11 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         </label>
         <ul>
-            <li><a href="{{ url('/Dashboard-Admin') }}">Dashboard</a></li>
-            <li><a href="{{ url('/Organization-Account-Management') }}">Organization Account Management</a></li>
-            <li><a href="{{ url('/Application-Admin') }}">Application</a></li>
-            <li><a href="{{ url('/Post-Report') }}">Post Report</a></li>
-            <li><a href="{{ url('/Pre-Evaluation-Document') }}">Pre Evaluation Documents</a></li>
+            <li><a href="{{ url('/faculty/Dashboard-Admin') }}">Dashboard</a></li>
+            <li><a href="{{ url('/faculty/Organization-Account-Management') }}">Organization Account Management</a></li>
+            <li><a href="{{ url('/faculty/Application-Admin') }}">Application</a></li>
+            <li><a href="{{ url('/faculty/Post-Report') }}">Post Report</a></li>
+            <li><a href="{{ url('/faculty/Pre-Evaluation-Document') }}">Pre Evaluation Documents</a></li>
             <!--<li><a href="#">Log-Out</a></li>-->
         </ul>            
     </div>   
