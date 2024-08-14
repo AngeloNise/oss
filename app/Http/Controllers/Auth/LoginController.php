@@ -37,4 +37,8 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
     }
+    public function orgLogin()
+    {
+        return view('org.auth.login'); // Update to the new path
+    }
 }
