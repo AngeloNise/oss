@@ -36,8 +36,8 @@
         <h1>Hi, PUPian!</h1>
         <p>Please click or tap your destination.</p>
         <div class="buttons">
-            <a href="/Homepage" class="button student">Student</a>
-            <a href="/Dashboard-Admin" class="button faculty">Faculty</a>
+            <a href="/login" class="button student">Student</a>
+            <a href="/faculty/login" class="button faculty">Faculty</a>
         </div>
         <p class="terms">
             By using this service, you understood and agree to the PUP Online Services 
