@@ -38,19 +38,19 @@ Route::prefix('faculty')->name('faculty.')->group(function () {
 
         Route::get('/Organization-Account-Management', function() {
             return view ('/faculty/auth/oam');
-        })->name('dbadmin');
+        })->name('dbadmin1');
         
         Route::get('/Application-Admin', function() {
             return view ('/faculty/auth/applicationadmin');
-        })->name('dbadmin');
+        })->name('dbadmin2');
 
         Route::get('/Post-Report', function() {
             return view ('/faculty/auth/postreport');
-        })->name('dbadmin');
+        })->name('dbadmin3');
 
         Route::get('/Pre-Evaluation-Document', function() {
             return view ('/faculty/auth/preevaldoc');
-        })->name('dbadmin');
+        })->name('dbadmin4');
     });
 });
 
