@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\User\Desktop\new\resources\views\facultylogin.blade.php ENDPATH**/ ?>
