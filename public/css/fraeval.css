@@ -56,3 +56,30 @@ button:hover {
 .form-group:last-of-type {
     margin-bottom: 0;
 }
+
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 50%;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Fade out effect */
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}

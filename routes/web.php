@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Faculty\FacultyHomeController;
 use App\Http\Controllers\Faculty\FacultyLoginController;
+use App\Http\Controllers\preeval\FRAController;
+use App\Http\Controllers\preeval\FRADocController;
 use App\Http\Middleware\UserMiddleware;
 use App\Http\Middleware\FacultyMiddleware;
 use App\Http\Middleware\GuestFacultyMiddleware;
@@ -55,7 +57,7 @@ Route::prefix('faculty')->name('faculty.')->group(function () {
 
 // Auth routes
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dborg')->middleware(UserMiddleware::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Homepage')->middleware(UserMiddleware::class);
 Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'orgLogin'])->name('login');
 
 // Organization routes
@@ -92,8 +94,14 @@ Route::middleware(['auth'])->group(function () {
         return view('/org/auth/incampus');
     });
 
-    Route::get('/Pre-Evaluation-FRA', function () {
-        return view('/org/auth/preevalfra');
-    });
+    //Route::get('/Fund-Raising', function () {
+        //return view('/org/auth/preevalfra');
+    //});
+    Route::get('/Fund-Raising', [FRAController::class,'preevalfra']);
+    Route::post('/uploaddocument', [FRAController::class,'store']);
+    Route::get('/faculty/Pre-Evaluation-Document', [FRADocController::class, 'display'])->name('preevaldoc');
+    Route::get('/display', [FRADocController::class, 'display'])->name('display');
+    Route::get('/download/{filename}', [FRADocController::class, 'download'])->name('download');
+    Route::get('/view/{type}/{filename}', [FRADocController::class, 'view'])->name('view');
 
 });
