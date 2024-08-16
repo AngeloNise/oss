@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\User\Desktop\new\resources\views\orglogin.blade.php ENDPATH**/ ?>

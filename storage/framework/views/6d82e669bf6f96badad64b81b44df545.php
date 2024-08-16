@@ -1,5 +1,5 @@
-@extends('layout.guestlayout')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="centerbody">
     <div class="center">
         <h1>Office of the Student Services</h1>
@@ -26,4 +26,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.guestlayout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\User\Desktop\new\resources\views/welcome.blade.php ENDPATH**/ ?>
