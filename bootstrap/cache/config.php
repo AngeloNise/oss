@@ -154,8 +154,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'E:\\DL\\OSS\\oss\\storage\\framework/cache/data',
-        'lock_path' => 'E:\\DL\\OSS\\oss\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\framework/cache/data',
+        'lock_path' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -327,13 +327,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\DL\\OSS\\oss\\storage\\app',
+        'root' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\DL\\OSS\\oss\\storage\\app/public',
+        'root' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -353,7 +353,7 @@
     ),
     'links' => 
     array (
-      'E:\\DL\\OSS\\oss\\public\\storage' => 'E:\\DL\\OSS\\oss\\storage\\app/public',
+      'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\public\\storage' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\app/public',
     ),
   ),
   'logging' => 
@@ -378,14 +378,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'E:\\DL\\OSS\\oss\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'E:\\DL\\OSS\\oss\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -450,7 +450,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'E:\\DL\\OSS\\oss\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -526,7 +526,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'E:\\DL\\OSS\\oss\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -621,7 +621,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'E:\\DL\\OSS\\oss\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -743,9 +743,9 @@
   array (
     'paths' => 
     array (
-      0 => 'E:\\DL\\OSS\\oss\\resources\\views',
+      0 => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\resources\\views',
     ),
-    'compiled' => 'E:\\DL\\OSS\\oss\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\mark angelo aboy\\Desktop\\testcmd\\oss\\storage\\framework\\views',
   ),
   'tinker' => 
   array (
